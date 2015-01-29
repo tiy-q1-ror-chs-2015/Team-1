@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  application_deadline: MyString
+  average_sat: 1
+  average_act: 1
+  school_name: MyString
+  student_population: 1
+  city: MyString
+  state: MyString
+  comment: MyString
+
+two:
+  application_deadline: MyString
+  average_sat: 1
+  average_act: 1
+  school_name: MyString
+  student_population: 1
+  city: MyString
+  state: MyString
+  comment: MyString
