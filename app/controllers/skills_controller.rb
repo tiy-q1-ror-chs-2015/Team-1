@@ -1,4 +1,4 @@
-class ReferencesController < ApplicationController
+class SkillsController < ApplicationController
   def index
   end
 
@@ -15,12 +15,11 @@ class ReferencesController < ApplicationController
   end
 
   private
-  def ref_params
+  def skill_params
     params.require(:test_scores)permit (
-      :name,
-      :relation_to_student,
-      :date,
-      :content
+      :skill_name
+      :description
+      :student_id
       )
   end
 end
