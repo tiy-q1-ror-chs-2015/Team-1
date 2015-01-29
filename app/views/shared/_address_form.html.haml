@@ -1,0 +1,15 @@
+= f.fields_for(:address) do |address_form|
+
+  = render partial:'form_component', locals: {f: address_form, field: :street, required: true, placeholder: 'Street Address' }
+
+  = render partial:'form_component', locals: {f: address_form, field: :city, required: true }
+
+  = render partial:'form_component', locals: {f: address_form, field: :state, required: true }
+
+
+  -#= address_form.label :state, class: 'sr-only'
+  -#= address_form.select :state, option_groups_from_collection_for_select(Country.all, :states, :abbreviation, :abbreviation, :name, @form.personal_information.address.state.abbreviation), {}, { class: 'select-state', data: { 'parsley-group' => 'address'}, required: true }
+
+  = render partial:'form_component', locals: {f: address_form, field: :zip, required: true, placeholder: 'Zip (or Postal Code)' }
+
+  = render partial:'form_component', locals: {f: address_form, field: :country, required: true }

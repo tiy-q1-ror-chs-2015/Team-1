@@ -1,13 +1,25 @@
 class StudentsController < ApplicationController
+  before_action :set_student, only: [:show, :edit, :update, :destroy]
+
   def index
     @students = Student.all
   end
 
   def new
-    @student = Student.new
+    @form = StudentForm.new(Student.new)
   end
 
   def create
+    @student = Student.new
+    @form = StudentForm.new(@student)
+    if @form.validate(params[:student])
+      @form.save
+      flash[:success] = 'Student saved'
+      redirect_to @student.show
+    else
+      flash[:error] = 'Could not save student'
+      render :new
+    end
   end
 
   def show
@@ -30,5 +42,9 @@ class StudentsController < ApplicationController
         )
 
     end
+
+  def set_student
+    @student = Student.find(params[:id])
+  end
 
 end
