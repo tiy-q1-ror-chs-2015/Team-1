@@ -9,7 +9,7 @@ default: &default
   pool: 5
   timeout: 5000
   username: <%= ENV['db_user'] || 'root' %>
-  password: <%= ENV['db_pw']   || nil %>
+  password: <%= ENV['db_pw']   || 'root' %>
   port: <%= ENV['db_port'] || 3306 %>
 
 development:

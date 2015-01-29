@@ -11,7 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150129191211) do
+ActiveRecord::Schema.define(version: 20150129212027) do
+
+  create_table "addresses", force: :cascade do |t|
+    t.string   "street",           limit: 255
+    t.string   "city",             limit: 255
+    t.string   "state",            limit: 255
+    t.string   "country",          limit: 255
+    t.integer  "addressable_id",   limit: 4
+    t.string   "addressable_type", limit: 255
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+  end
+
+  add_index "addresses", ["addressable_type", "addressable_id"], name: "index_addresses_on_addressable_type_and_addressable_id", using: :btree
 
   create_table "references", force: :cascade do |t|
     t.string   "name",                limit: 255
@@ -54,4 +67,16 @@ ActiveRecord::Schema.define(version: 20150129191211) do
     t.datetime "updated_at",             null: false
   end
 
+  create_table "tests", force: :cascade do |t|
+    t.string   "test_type",  limit: 255
+    t.string   "score",      limit: 255
+    t.date     "date_taken"
+    t.integer  "student_id", limit: 4
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  add_index "tests", ["student_id"], name: "index_tests_on_student_id", using: :btree
+
+  add_foreign_key "tests", "students"
 end
