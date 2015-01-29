@@ -1,0 +1,2 @@
+module GoalpathsHelper
+end

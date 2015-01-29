@@ -1,5 +1,5 @@
-class ReferencesController < ApplicationController
-  def index
+class EssaysController < ApplicationController
+   def index
   end
 
   def new 
@@ -15,11 +15,9 @@ class ReferencesController < ApplicationController
   end
 
   private
-  def ref_params
+  def essay_params
     params.require(:test_scores)permit (
-      :name,
-      :relation_to_student,
-      :date,
+      :topic,
       :content
       )
   end
