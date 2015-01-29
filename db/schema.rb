@@ -11,7 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150129191211) do
+ActiveRecord::Schema.define(version: 20150129212518) do
+
+  create_table "essays", force: :cascade do |t|
+    t.string   "topic",      limit: 255
+    t.text     "content",    limit: 65535
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.integer  "student_id", limit: 4
+  end
+
+  create_table "experiences", force: :cascade do |t|
+    t.string   "title",       limit: 255
+    t.text     "description", limit: 65535
+    t.integer  "student_id",  limit: 4
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+  end
 
   create_table "references", force: :cascade do |t|
     t.string   "name",                limit: 255
@@ -33,6 +49,14 @@ ActiveRecord::Schema.define(version: 20150129191211) do
     t.string   "comment",              limit: 255
     t.datetime "created_at",                       null: false
     t.datetime "updated_at",                       null: false
+  end
+
+  create_table "skills", force: :cascade do |t|
+    t.string   "skill_name",  limit: 255
+    t.text     "description", limit: 65535
+    t.integer  "student_id",  limit: 4
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
   end
 
   create_table "students", force: :cascade do |t|
