@@ -1,0 +1,13 @@
+%h1 Prospective Universities
+= link_to "Add a new University", new_school_path
+%br
+%br
+- @schools.each do |school|
+  %br
+  %strong
+    School Name:
+  = school.school_name
+  %br
+  = link_to "View School", school_path(school)
+  %br
+  %br
