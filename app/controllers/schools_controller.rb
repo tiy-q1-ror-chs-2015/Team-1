@@ -15,8 +15,20 @@ class SchoolsController < ApplicationController
   def show
     @school = School.find params[:id]
   end
+
   def edit
-    @school = Medication.find params[:id]
+    @school = School.find params[:id]
+  end
+
+  def update
+    @school = School.find params[:id]
+    @school.update_attributes school_params
+    redirect_to school_path(@school)
+  end
+  def destroy
+    @school = School.find params[:id]
+    @school.delete
+    redirect_to schools_path
   end
 private
   def school_params
