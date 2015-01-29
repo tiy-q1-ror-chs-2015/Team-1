@@ -11,15 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150129191211) do
+ActiveRecord::Schema.define(version: 20150129212519) do
+
+  create_table "goalpaths", force: :cascade do |t|
+    t.string   "end_goal",   limit: 255
+    t.integer  "student_id", limit: 4
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
 
   create_table "references", force: :cascade do |t|
     t.string   "name",                limit: 255
     t.string   "relation_to_student", limit: 255
     t.integer  "date",                limit: 4
-    t.string   "content",             limit: 255
-    t.datetime "created_at",                      null: false
-    t.datetime "updated_at",                      null: false
+    t.text     "content",             limit: 65535
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
   end
 
   create_table "schools", force: :cascade do |t|
