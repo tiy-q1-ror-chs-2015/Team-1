@@ -55,6 +55,9 @@ gem 'ice_nine', require: ['ice_nine', 'ice_nine/core_ext/object']
 # State Manager
 gem 'aasm'
 
+# Foundation for styling and layout
+gem 'foundation-rails'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
