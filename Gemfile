@@ -27,8 +27,33 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-# Use Figaro for optional configuration
+
+# Frontend package management
+gem 'bower-rails'
+
+# Load YAML file into ENV variables
 gem 'figaro'
+
+# Authorization
+gem 'devise'
+
+# Eases requiring a directory and its children
+gem 'require_all'
+
+# Greatly improve form management
+gem 'reform'
+
+# Avoid fat models _and_ fat controllers
+gem 'interactor'
+
+# Allow turning numbers into human-readable strings (e.g., one, two, three)
+gem 'humanize'
+
+# Enable deepfreezing of objects
+gem 'ice_nine', require: ['ice_nine', 'ice_nine/core_ext/object']
+
+# State Manager
+gem 'aasm'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
