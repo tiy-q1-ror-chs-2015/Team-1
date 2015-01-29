@@ -15,7 +15,7 @@ class StudentsController < ApplicationController
     if @form.validate(params[:student])
       @form.save
       flash[:success] = 'Student saved'
-      redirect_to @student.show
+      redirect_to @student
     else
       flash[:error] = 'Could not save student'
       render :new
@@ -23,6 +23,7 @@ class StudentsController < ApplicationController
   end
 
   def show
+
   end
 
   def destroy
@@ -30,18 +31,7 @@ class StudentsController < ApplicationController
 
 
 
-  private 
-    def s_params
-      params.require(:students).permit(
-        :first_name,
-        :last_name,
-        :address,
-        :city,
-        :state,
-        :zip
-        )
-
-    end
+  private
 
   def set_student
     @student = Student.find(params[:id])

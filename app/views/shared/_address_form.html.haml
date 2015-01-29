@@ -6,7 +6,6 @@
 
   = render partial:'form_component', locals: {f: address_form, field: :state, required: true }
 
-
   -#= address_form.label :state, class: 'sr-only'
   -#= address_form.select :state, option_groups_from_collection_for_select(Country.all, :states, :abbreviation, :abbreviation, :name, @form.personal_information.address.state.abbreviation), {}, { class: 'select-state', data: { 'parsley-group' => 'address'}, required: true }
 
