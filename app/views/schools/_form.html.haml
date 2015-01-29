@@ -1,0 +1,26 @@
+= form_for @school do |s|
+  = s.label :school_name
+  = s.text_field :school_name
+  %br
+  = s.label :application_deadline
+  = s.date_field :application_deadline
+  %br
+  = s.label :average_sat
+  = s.text_field :average_sat
+  %br
+  = s.label :average_act
+  = s.text_field :average_act
+  %br
+  = s.label :student_population
+  = s.text_field :student_population
+  %br
+  = s.label :city
+  = s.text_field :city
+  %br
+  = s.label :state
+  = s.text_field :state
+  %br
+  = s.label :comment
+  = s.text_field :comment
+  %br
+  = s.submit
