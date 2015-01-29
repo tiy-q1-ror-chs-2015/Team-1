@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150129180413) do
+ActiveRecord::Schema.define(version: 20150129191211) do
 
   create_table "references", force: :cascade do |t|
     t.string   "name",                limit: 255
@@ -42,6 +42,14 @@ ActiveRecord::Schema.define(version: 20150129180413) do
     t.string   "city",       limit: 255
     t.string   "state",      limit: 255
     t.integer  "zip",        limit: 4
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  create_table "test_scores", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.string   "score",      limit: 255
+    t.string   "date_taken", limit: 255
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
   end

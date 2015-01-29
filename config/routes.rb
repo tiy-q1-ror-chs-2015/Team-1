@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :schools
   resources :tests
   resources :students
+  resources :test_scores
   
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
