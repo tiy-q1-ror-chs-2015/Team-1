@@ -50,7 +50,7 @@ class ExperiencesController < ApplicationController
     # before: set_experience
     if @experience.destroy
       flash[:success] = 'Experience deleted!'
-      render :index
+      redirect_to action: :index
     else
       flash[:error] = 'Could not delete experience'
       render :show
