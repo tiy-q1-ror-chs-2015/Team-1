@@ -29,6 +29,7 @@ class ExperiencesController < ApplicationController
 
   def destroy
   end
+<<<<<<< HEAD
 
   def set_student
     @student = Student.find params[:student_id]
@@ -37,4 +38,6 @@ class ExperiencesController < ApplicationController
   def set_experience
     @experience = Experience.find params[:id]
   end
+=======
+>>>>>>> 83f005459d33e61f74f3991043149e8f47787b39
 end
