@@ -6,7 +6,7 @@ module ApplicationHelper
         concat content_tag(:span, '', class: "fi-#{icon}")
         concat " #{text}"
       else
-        concat " #{text}"
+        concat "#{text} "
         concat content_tag(:span, '', class: "fi-#{icon}")
       end
     end
@@ -28,5 +28,9 @@ module ApplicationHelper
 
   def next_button link_path, text='Next', icon_on_left:false
     icon_button link_path, 'arrow-right', text, 'next', icon_on_left
+  end
+
+  def add_button link_path, text='Add', icon_on_left:true, icon:'plus'
+    icon_button link_path, icon, text, 'add', icon_on_left
   end
 end
