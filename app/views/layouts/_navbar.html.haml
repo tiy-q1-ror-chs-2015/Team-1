@@ -1,13 +1,11 @@
 .contain-to-grid.sticky
   %nav.top-bar{"data-options" => "sticky_on: large", "data-topbar" => "", :role => "navigation"}
+    %div.nav-right
+      - if current_user
+        = link_to "Logout #{current_user.email}", destroy_user_session_path, method: :delete
+      - else
+        = link_to "Register", new_user_registration_path
+        = link_to "Login", new_user_session_path
     = link_to "Home", root_path
     = link_to "Students", students_path
     = link_to "Schools", schools_path
-  %nav.nav-right
-    - if current_user
-      = link_to "Logout #{current_user.email}", destroy_user_session_path, method: :delete
-    - else
-      = link_to "Register", new_user_registration_path
-      = link_to "Login", new_user_session_path
-
-

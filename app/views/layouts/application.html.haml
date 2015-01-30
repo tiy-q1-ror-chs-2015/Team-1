@@ -1,4 +1,17 @@
 !!!
+
+- content_for :main_body do
+  = render 'layouts/navbar'
+  .row
+    .small-2.columns
+      %h4 
+        This is a left sidebar
+    .small-8.columns
+      = yield
+    .small-2.columns
+      %h4 
+        This is a right sidebar
+
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
@@ -9,9 +22,7 @@
   - if flash.keys.any?
     - flash_type, flash_title = flash.first
     %body{data: {'flash-type'=>"#{flash_type}", 'flash-title'=>"#{flash_title}"} }
-      = render 'layouts/navbar'
-      = yield
+      = content_for :main_body
   - else
     %body
-      = render 'layouts/navbar'
-      = yield
+      = content_for :main_body
