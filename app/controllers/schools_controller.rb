@@ -39,7 +39,7 @@ private
       :school_name,
       :student_population,
       :city,
-      :state,
+      :state_id,
       :comment
       )
   end
