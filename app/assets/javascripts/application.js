@@ -11,9 +11,11 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.turbolinks
 //= require jquery_ujs
 //= require foundation
 //= require turbolinks
+//= require bower_components/sweetalert/lib/sweet-alert
 //= require_tree .
 
 $(function(){ $(document).foundation(); });
