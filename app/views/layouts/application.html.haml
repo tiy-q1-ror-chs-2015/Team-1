@@ -7,6 +7,5 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
-    = link_to "Home Page", root_path
-    = link_to "School", schools_path
+    = render 'layouts/navbar'
     = yield
