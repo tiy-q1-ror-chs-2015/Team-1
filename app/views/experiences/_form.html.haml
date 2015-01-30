@@ -1,5 +1,8 @@
+%h1
+  Add Your Experience
 = form_for([@student, @form]) do |experience_form|
   = field experience_form, :title, required: true
   = field experience_form, :description, :text_area, required: true
 
-  = experience_form.submit
+  = submit_button("#{params[:action].to_s.titleize} Experience")
+  = back_button student_experiences_path

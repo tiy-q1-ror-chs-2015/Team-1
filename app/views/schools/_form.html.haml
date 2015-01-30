@@ -1,26 +1,21 @@
-= form_for @school do |s|
-  = s.label :school_name
-  = s.text_field :school_name
+%h1 
+  Create Your School Here
+%br
+= form_for(@school, data: {'abide'=>true}) do |s|
+  = s.text_field :school_name, required: true, placeholder: 'University Name'
   %br
-  = s.label :application_deadline
-  = s.date_field :application_deadline
+  = s.date_field :application_deadline, required: true, placeholder: 'Application Deadline'
   %br
-  = s.label :average_sat
-  = s.text_field :average_sat
+  = s.text_field :average_sat, required: true, placeholder: 'Average SAT Score'
   %br
-  = s.label :average_act
-  = s.text_field :average_act
+  = s.text_field :average_act, required: true, placeholder: 'Average ACT Score'
   %br
-  = s.label :student_population
-  = s.text_field :student_population
+  = s.text_field :student_population, required: true, placeholder: 'Student Population'
   %br
-  = s.label :city
-  = s.text_field :city
+  = s.text_field :city, required: true, placeholder: 'City'
   %br
-  = s.label :state
-  = s.text_field :state
+  = s.text_field :state, required: true, placeholder: 'State'
   %br
-  = s.label :comment
-  = s.text_field :comment
+  = s.text_field :comment, required: true, placeholder: 'Comment About School'
   %br
-  = s.submit
+= submit_button("#{params[:action].to_s.titleize} Univeristy/School")
