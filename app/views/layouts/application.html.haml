@@ -6,6 +6,12 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
-  %body
-    = render 'layouts/navbar'
-    = yield
+  - if flash.keys.any?
+    - flash_type, flash_message = flash.first
+    %body{data: {'flash_type'=>"#{flash_type}", 'flash_message'=>"#{flash_message}"} }
+      = render 'layouts/navbar'
+      = yield
+  - else
+    %body
+      = render 'layouts/navbar'
+      = yield
