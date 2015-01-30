@@ -1,0 +1,14 @@
+-# Requires f (=form) and field. Accepts field, placeholder, parsley-group, required, and args hash.
+-# Field defaults to text_field if not otherwise specified.
+
+- args ||= {}
+- placeholder ||= field.to_s.titleize
+- required ||= false
+- type ||= :text_field
+
+- args.merge!({ placeholder: placeholder })
+
+= f.label field, class: 'hidden-for-small-up'
+- if required
+  - args[:required] = true
+= f.send type, field, **args

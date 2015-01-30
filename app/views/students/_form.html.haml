@@ -1,0 +1,9 @@
+= form_for(@form) do |student_form|
+  = field student_form, :first_name, required: true
+
+  = field student_form, :last_name, required: true
+
+
+  = render partial:'shared/address_form', locals: {f: student_form}
+
+  = student_form.submit

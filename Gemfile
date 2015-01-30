@@ -22,11 +22,14 @@ gem 'faker'
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
+# Required to make JS scripts that sue $(document).ready function properly
+gem 'jquery-turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
-
+# Stop 'getting' assets in server tab of terminal
+gem 'quiet_assets', group: :development
 
 # Frontend package management
 gem 'bower-rails'
@@ -41,7 +44,10 @@ gem 'devise'
 gem 'require_all'
 
 # Greatly improve form management
-gem 'reform'
+gem 'reform', require: ['reform', 'reform/form/coercion']
+
+# All kinds of awesome stuff to help with types and coercion. Used by Reform.
+gem 'virtus'
 
 # Avoid fat models _and_ fat controllers
 gem 'interactor'
@@ -67,7 +73,7 @@ gem 'foundation-rails'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-group :development, :test do
+group :development, :test, :profile do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 
@@ -78,3 +84,7 @@ group :development, :test do
   gem 'spring'
 end
 
+group :profile do
+  # Performance testing and improvement
+  gem 'newrelic_rpm'
+end

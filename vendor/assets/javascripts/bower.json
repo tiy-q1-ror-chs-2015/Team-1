@@ -1,0 +1,7 @@
+{
+  "name": "dsl-generated dependencies",
+  "dependencies": {
+    "sweetalert": "latest",
+    "selectize": "latest"
+  }
+}

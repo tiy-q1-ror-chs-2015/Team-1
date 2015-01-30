@@ -1,5 +1,6 @@
 %h1 Student Info
 
+<<<<<<< HEAD
 %ul
   - @students.each do |student|
     %li
@@ -9,3 +10,11 @@
 
 
 
+=======
+= link_to 'Create Student Profile', new_student_path(@student)
+
+%ul
+  - @students.each do |student|
+    %li
+      = link_to student.full_name, student
+>>>>>>> 2401706b6730ff0a8ef2694c54469a12cd791369

@@ -1,0 +1,14 @@
+= f.fields_for(:address) do |address_form|
+
+  = field address_form, :street, required: true, placeholder: 'Street Address'
+
+  = field address_form, :city, required: true
+
+  = field address_form, :state, required: true
+
+  -#= address_form.label :state, class: 'sr-only'
+  -#= address_form.select :state, option_groups_from_collection_for_select(Country.all, :states, :abbreviation, :abbreviation, :name, @form.personal_information.address.state.abbreviation), {}, { class: 'select-state', data: { 'parsley-group' => 'address'}, required: true }
+
+  = field address_form, :zip, required: true, placeholder: 'Zip (or Postal Code)'
+
+  = field address_form, :country, required: true

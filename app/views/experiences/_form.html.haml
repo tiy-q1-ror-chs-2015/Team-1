@@ -1,0 +1,5 @@
+= form_for([@student, @form]) do |experience_form|
+  = field experience_form, :title, required: true
+  = field experience_form, :description, type: :text_area, required: true
+
+  = experience_form.submit
