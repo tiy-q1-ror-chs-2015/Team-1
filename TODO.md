@@ -7,4 +7,3 @@ ReferencesController
 
 # Ryan
 Confirm Dialog
-User login/welcome stuff for Jacqui
