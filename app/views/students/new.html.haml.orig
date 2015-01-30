@@ -1,0 +1,11 @@
+<<<<<<< HEAD
+
+%h3 Enter Student Information
+
+= render 'form'
+=======
+%h3 Enter Student Information
+
+
+= render 'form'
+>>>>>>> cec79edf8573ae7f5ecf881508af83f885363efe
