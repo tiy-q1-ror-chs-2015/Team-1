@@ -1,4 +1,4 @@
-# Team-1
+# Dark Magic
 
 Each USER has one and only one STUDENTPROFILE.
 
