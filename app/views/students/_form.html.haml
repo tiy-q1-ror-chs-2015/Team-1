@@ -1,4 +1,4 @@
-= form_for(@form) do |student_form|
+= form_for(@form, data: {'abide'=>true}) do |student_form|
   = field student_form, :first_name, required: true
 
   = field student_form, :last_name, required: true

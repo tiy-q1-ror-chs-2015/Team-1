@@ -1,3 +1,8 @@
-=link_to 'back', students_path
+= "Displaying Information for #{@student.first_name} #{@student.last_name}:"
+%br
+%br
 =link_to 'Goal Paths', [@student, :goalpaths]
+%br
 =link_to 'Experiences', [@student, :experiences]
+%br
+= back_button students_path
