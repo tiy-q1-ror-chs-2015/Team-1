@@ -1,5 +1,7 @@
 coerceSweetalertType = (type)->
-  type = 'success' if type == 'notice'
+  if type == 'notice' then type = 'success'
+  if type not in ['warning', 'error', 'success', 'info'] then type = 'info'
+  type
 
 $ ->
   if $('body').attr('data-flash-title')
