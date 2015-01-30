@@ -33,6 +33,9 @@
   Comment:
 = @school.comment
 %br
+%br
 =link_to "Edit School", edit_school_path(@school)
+%br
 =link_to "Delete School", school_path(@school), method: :delete, data: { confirm: "Are you sure you want to delete #{@school.school_name}"}
+%br
 = link_to "Return to All Schools", schools_path
