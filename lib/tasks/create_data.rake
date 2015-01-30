@@ -29,7 +29,19 @@ task create_student: :environment do
       })
       end
   end
-  
+end
 
-
+task create_school: :environment do
+  3.times do
+    new_school = School.create!({
+    application_deadline: Faker::Date.forward(50),      
+    average_sat: Faker::Number.number(4),     
+    average_act: Faker::Number.number(2),   
+    school_name: Faker::Name.name,    
+    student_population: Faker::Number.between(2,5),        
+    city: Faker::Address.city,      
+    state: Faker::Address.state,      
+    comment: Faker::Lorem.sentence
+    })
+  end  
 end
