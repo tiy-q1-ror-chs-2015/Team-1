@@ -1,0 +1,41 @@
+!!!
+
+- content_for :main_body do
+  = render 'layouts/navbar'
+  .row
+    .small-2.columns
+      %h4 
+        This is a left sidebar
+    .small-8.columns
+      = yield
+    .small-2.columns
+      %h4 
+        This is a right sidebar
+
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Week4group
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+<<<<<<< HEAD
+  %body
+    = link_to "Home Page", root_path
+    = link_to "School", schools_path
+    = link_to "Student", students_path
+    = yield
+=======
+  - if flash.keys.any?
+    - flash_type, flash_title = flash.first
+    %body{data: {'flash-type'=>"#{flash_type}", 'flash-title'=>"#{flash_title}"} }
+      = content_for :main_body
+  - else
+    %body
+<<<<<<< HEAD
+      = content_for :main_body
+=======
+      = render 'layouts/navbar'
+      = yield
+>>>>>>> 2401706b6730ff0a8ef2694c54469a12cd791369
+>>>>>>> d31dd19a0dcabae1d0249f1e46fd675d1c490e23
