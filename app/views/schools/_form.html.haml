@@ -1,8 +1,9 @@
 %h1 
   Create Your School Here
-%br
+
 = form_for(@school, data: {'abide'=>true}) do |s|
-  = s.text_field :school_name, required: true, placeholder: 'University Name'
+  = s.label :school_name
+  = s.text_field :school_name
   %br
   = s.date_field :application_deadline, required: true, placeholder: 'Application Deadline'
   %br
@@ -12,9 +13,16 @@
   %br
   = s.text_field :student_population, required: true, placeholder: 'Student Population'
   %br
-  = s.text_field :city, required: true, placeholder: 'City'
+  = s.label :city
+  = s.text_field :city
   %br
-  = s.text_field :state, required: true, placeholder: 'State'
+  %div.state-field
+    = s.label :state_id, class: 'hidden-for-small-up'
+    = s.select :state_id, options_from_collection_for_select(State.all, :id, :name, proc {|state| state.id == @school.state_id}), {}, { class: 'select-state', required: true, data: {'selectize-standard' => true} }
+    %small.error= 'You must select a state.'
+  %br
+  = s.label :comment
+  = s.text_field :comment
   %br
   = s.text_field :comment, required: true, placeholder: 'Comment About School'
   %br

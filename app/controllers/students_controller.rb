@@ -32,10 +32,6 @@ class StudentsController < ApplicationController
     end
   end
 
-
-  def show
-    @student = Student.find params[:id]
-  end
   def update
     # before: set_student and set_form
     if @form.validate(params[:student])
@@ -46,7 +42,6 @@ class StudentsController < ApplicationController
       flash[:error] = 'Could not save student'
       render :edit
     end
-
   end
 
   def destroy
