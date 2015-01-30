@@ -14,6 +14,7 @@
  *= require ie9
  *= require selectize.default
  *= require sweet-alert
+ *= require foundation-icons
  *= require_tree .
  *= require_self
 
