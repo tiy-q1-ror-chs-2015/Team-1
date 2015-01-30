@@ -1,0 +1,10 @@
+%h1
+  Experience list for
+  = @student.full_name
+
+= link_to 'Add a new experience', new_student_experience_path(@student)
+
+%ul
+  - @experiences.each do |experience|
+    %li
+      = link_to experience.title, [@student, experience]
