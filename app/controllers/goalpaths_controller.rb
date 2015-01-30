@@ -15,7 +15,7 @@ class GoalpathsController < ApplicationController
   end
 
   def new
-    # before: set_new_goalpath and set_form
+    
   end
 
   def create

@@ -5,5 +5,5 @@
 
 
   = render partial:'shared/address_form', locals: {f: student_form}
-
-  = student_form.submit
+  
+  = submit_button("#{params[:action].to_s.titleize} Student")

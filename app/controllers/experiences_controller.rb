@@ -58,10 +58,6 @@ class ExperiencesController < ApplicationController
   end
 
   private
-
-<<<<<<< HEAD
-  
-=======
   def set_student
     @student = Student.find params[:student_id]
   end
@@ -81,5 +77,4 @@ class ExperiencesController < ApplicationController
   def redirect_to_experience
     redirect_to [@student, @experience]
   end
->>>>>>> 2401706b6730ff0a8ef2694c54469a12cd791369
 end
