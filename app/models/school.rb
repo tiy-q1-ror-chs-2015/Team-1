@@ -4,4 +4,6 @@ class School < ActiveRecord::Base
 
   has_many :goalpaths, through: :goalpath_schools
   has_many :goalpath_schools, dependent: :destroy
+
+  belongs_to :state
 end
