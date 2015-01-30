@@ -7,8 +7,7 @@ task create_student: :environment do
       new_student.create_address( 
       street: Faker::Address.street_address,
       city: Faker::Address.city,
-      state: Faker::Address.state,
-      country: Faker::Address.country
+      state: State.find_by(name: Faker::Address.state)
       )
     
       2.times do
@@ -40,7 +39,7 @@ task create_school: :environment do
     school_name: Faker::Name.name,    
     student_population: Faker::Number.between(2,5),        
     city: Faker::Address.city,      
-    state: Faker::Address.state,      
+    state: State.find_by(name: Faker::Address.state),
     comment: Faker::Lorem.sentence
     })
   end  

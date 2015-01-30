@@ -25,7 +25,7 @@ class StudentsController < ApplicationController
     if @form.validate(params[:student])
       @form.save
       flash[:success] = 'Student saved'
-      redirect_to root_path
+      redirect_to @student
     else
       flash[:error] = 'Could not save student'
       render :new
