@@ -1,13 +1,25 @@
 module ApplicationHelper
 
-  def icon_button link_path, icon, text, button_class, icon_on_left, method: :get
-    link_to link_path, class: "button button-#{button_class}", method: method do
-      if icon_on_left
-        concat content_tag(:span, '', class: "fi-#{icon}")
-        concat " #{text}"
-      else
-        concat "#{text} "
-        concat content_tag(:span, '', class: "fi-#{icon}")
+  def icon_button link_path, icon, text, button_class, icon_on_left, method: :get, confirm:false
+    if confirm
+      link_to link_path, class: "button button-#{button_class}", method: method, data: {'confirm'=>confirm} do
+        if icon_on_left
+          concat content_tag(:span, '', class: "fi-#{icon}")
+          concat " #{text}"
+        else
+          concat "#{text} "
+          concat content_tag(:span, '', class: "fi-#{icon}")
+        end
+      end
+    else
+      link_to link_path, class: "button button-#{button_class}", method: method do
+        if icon_on_left
+          concat content_tag(:span, '', class: "fi-#{icon}")
+          concat " #{text}"
+        else
+          concat "#{text} "
+          concat content_tag(:span, '', class: "fi-#{icon}")
+        end
       end
     end
   end
@@ -23,7 +35,7 @@ module ApplicationHelper
   end
 
   def delete_button link_path, text:'Delete', icon_on_left:true
-    icon_button link_path, 'trash', text, 'delete', icon_on_left, method: :delete
+    icon_button link_path, 'trash', text, 'delete', icon_on_left, method: :delete, confirm:true
   end
 
   def next_button link_path, text='Next', icon_on_left:false
