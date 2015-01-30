@@ -28,7 +28,8 @@ gem 'jquery-turbolinks'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
-
+# Stop 'getting' assets in server tab of terminal
+gem 'quiet_assets', group: :development
 
 # Frontend package management
 gem 'bower-rails'
