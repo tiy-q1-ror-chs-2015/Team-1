@@ -33,4 +33,10 @@ module ApplicationHelper
   def add_button link_path, text='Add', icon_on_left:true, icon:'plus'
     icon_button link_path, icon, text, 'add', icon_on_left
   end
+  def submit_button text='Submit', icon_on_left:true, icon:'check' 
+    content_tag :button, type: 'submit' do 
+      concat content_tag(:span, '', class: "fi-#{icon}")
+      concat " #{text}"
+    end
+  end
 end

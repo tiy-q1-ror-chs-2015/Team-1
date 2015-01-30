@@ -1,6 +1,6 @@
 %h1 Prospective Universities
-= link_to "Add a new University", new_school_path
 %br
+= add_button new_school_path, "Create new school"
 %br
 - @schools.each do |school|
   %br
@@ -11,3 +11,4 @@
   = link_to "View School", school_path(school)
   %br
   %br
+= back_button root_path
