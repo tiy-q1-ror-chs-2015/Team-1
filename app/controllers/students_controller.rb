@@ -25,17 +25,18 @@ class StudentsController < ApplicationController
     if @form.validate(params[:student])
       @form.save
       flash[:success] = 'Student saved'
-      redirect_to @student
+      redirect_to root_path
     else
       flash[:error] = 'Could not save student'
       render :new
     end
   end
 
-<<<<<<< HEAD
+
   def show
     @student = Student.find params[:id]
-=======
+  end
+
   def update
     # before: set_student and set_form
     if @form.validate(params[:student])
@@ -46,7 +47,6 @@ class StudentsController < ApplicationController
       flash[:error] = 'Could not save student'
       render :edit
     end
->>>>>>> 2401706b6730ff0a8ef2694c54469a12cd791369
   end
 
   def destroy
