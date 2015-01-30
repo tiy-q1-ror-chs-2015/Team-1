@@ -32,11 +32,6 @@ class StudentsController < ApplicationController
     end
   end
 
-
-  def show
-    @student = Student.find params[:id]
-  end
-
   def update
     # before: set_student and set_form
     if @form.validate(params[:student])

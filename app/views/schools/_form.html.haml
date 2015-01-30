@@ -13,6 +13,9 @@
   %br
   = s.text_field :student_population, required: true, placeholder: 'Student Population'
   %br
+  = s.label :city
+  = s.text_field :city
+  %br
   %div.state-field
     = s.label :state_id, class: 'hidden-for-small-up'
     = s.select :state_id, options_from_collection_for_select(State.all, :id, :name, proc {|state| state.id == @school.state_id}), {}, { class: 'select-state', required: true, data: {'selectize-standard' => true} }
