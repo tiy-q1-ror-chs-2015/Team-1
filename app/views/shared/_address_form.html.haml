@@ -1,4 +1,4 @@
-= f.fields_for(:address) do |address_form|
+= f.fields_for(:address, data: {'abide' => true}) do |address_form|
 
   = field address_form, :street, required: true, placeholder: 'Street Address'
 
@@ -6,7 +6,7 @@
 
   %div.state-field
     = address_form.label :state_id, class: 'hidden-for-small-up'
-    = address_form.select :state_id, options_from_collection_for_select(State.all, :abbreviation, :name, proc {|state| state.id == @form.model.address.state_id}), {}, { class: 'select-state', required: true }
+    = address_form.select :state_id, options_from_collection_for_select(State.all, :abbreviation, :name, proc {|state| state.id == @form.model.address.state_id}), {}, { class: 'select-state', required: true, data: {'selectize-standard' => true} }
     %small.error= 'You must select a state.'
 
   = field address_form, :zip, required: true, placeholder: 'Zip (or Postal Code)'
