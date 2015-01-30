@@ -7,4 +7,4 @@
 %ul
   - @goalpaths.each do |goalpath|
     %li
-      = link_to experience.title, [@student, goalpath]
+      = link_to goalpath.end_goal, [@student, goalpath]
