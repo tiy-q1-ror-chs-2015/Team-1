@@ -43,7 +43,10 @@ gem 'devise'
 gem 'require_all'
 
 # Greatly improve form management
-gem 'reform'
+gem 'reform', require: ['reform', 'reform/form/coercion']
+
+# All kinds of awesome stuff to help with types and coercion. Used by Reform.
+gem 'virtus'
 
 # Avoid fat models _and_ fat controllers
 gem 'interactor'
@@ -69,7 +72,7 @@ gem 'foundation-rails'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-group :development, :test do
+group :development, :test, :profile do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 
@@ -80,3 +83,7 @@ group :development, :test do
   gem 'spring'
 end
 
+group :profile do
+  # Performance testing and improvement
+  gem 'newrelic_rpm'
+end
