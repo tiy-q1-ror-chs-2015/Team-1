@@ -2,7 +2,7 @@
 
   = field address_form, :street, required: true, placeholder: 'Street Address'
 
-  = field address_form, :city, required: true
+  = field address_form, :city, required: true, pattern:'alphanumeric', error:'You must enter a city.'
 
   = field address_form, :state, required: true
 
