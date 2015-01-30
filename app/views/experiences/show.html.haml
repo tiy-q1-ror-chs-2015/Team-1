@@ -3,3 +3,7 @@
 %h3= 'Description'
 %p
   = @experience.description
+  
+= back_button [@student, :goalpaths]
+= edit_button [:edit, @student, @experience]
+= delete_button [@student, @experience]
