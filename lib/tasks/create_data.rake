@@ -10,8 +10,26 @@ task create_student: :environment do
       state: Faker::Address.state,
       country: Faker::Address.country
       )
-  
+    
+      2.times do
+      new_student.essays.create ({
+      topic: Faker::Lorem.word,
+      content: Faker::Lorem.paragraph
+
+      })
+
+      new_student.experiences.create ({
+      title: Faker::Lorem.word,
+      description: Faker::Lorem.paragraph
+      })
+
+      new_student.skills.create ({
+      skill_name: Faker::Lorem.word,
+      description: Faker::Lorem.paragraph
+      })
+      end
   end
+  
 
 
 end
