@@ -1,43 +1,8 @@
 .contain-to-grid.sticky
   %nav.top-bar{"data-options" => "sticky_on: large", "data-topbar" => "", :role => "navigation"}
     = link_to "Home", root_path
-<<<<<<< HEAD
-
-
-
-
-
-
-
-
-/ .icon-bar.five-up
-/   %a.item
-    
-/       %label= Home
-/   %a.item
-/     = link_to "Schools", schools_path
-/       %label= Schools
-/   %a.item
-/     = link_to "Students", students_path
-      
-/   %a.item
-/     = link_to "Logout", destroy_user_session_path
-/       %label= Logout
-/   %a.item
-/     = link_to "Register", new_user_registration_path
-/       %label= Register
-/   %a.item
-/     = link_to "Login", new_user_session_path
-/       %label= Login
-=======
-  %a.item
-    = link_to "Schools", schools_path
-  %a.item
     = link_to "Students", students_path
-  %a.item
+    = link_to "Schools", schools_path
     = link_to "Logout", destroy_user_session_path
-  %a.item
     = link_to "Register", new_user_registration_path
-  %a.item
     = link_to "Login", new_user_session_path
->>>>>>> c8a0903f4e9fa6690dd7405a748824cea7277991

@@ -1,0 +1,15 @@
+%h1= "Goal: #{@goalpath.end_goal.titleize}"
+%h2= @student.full_name
+
+
+= back_button [@student, :goalpaths]
+= edit_button [:edit, @student, @goalpath]
+= delete_button [@student, @goalpath]
+
+- schools = @goalpath.schools
+- unless schools.empty?
+  %h3
+    Schools Associated with this Goal:
+  %ul
+    - schools.each do |school|
+      %li= school.school_name

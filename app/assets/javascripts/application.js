@@ -13,6 +13,9 @@
 //= require jquery
 //= require jquery.turbolinks
 //= require jquery_ujs
+//= require bower_components/microplugin/src/microplugin
+//= require bower_components/sifter/sifter.js
+//= require bower_components/selectize/dist/js/selectize.js
 //= require foundation
 //= require turbolinks
 //= require bower_components/sweetalert/lib/sweet-alert

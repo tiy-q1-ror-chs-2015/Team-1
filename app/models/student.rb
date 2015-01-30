@@ -7,7 +7,7 @@ class Student < ActiveRecord::Base
   has_many :skills
   has_many :experiences
   has_many :schoools, through: :student_schools
-  has_many :student_schools
+  has_many :student_schools, dependent: :destroy
 
   def full_name
     [first_name, last_name].join(' ')

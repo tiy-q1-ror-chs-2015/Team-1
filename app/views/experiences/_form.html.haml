@@ -1,5 +1,5 @@
 = form_for([@student, @form]) do |experience_form|
-  = render partial:'form_component', locals: {f: experience_form, field: :title, required: true }
-  = render partial:'form_component', locals: {f: experience_form, type: :text_area, field: :description, required: true }
+  = field experience_form, :title, required: true
+  = field experience_form, :description, type: :text_area, required: true
 
   = experience_form.submit
