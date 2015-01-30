@@ -50,7 +50,7 @@ class GoalpathsController < ApplicationController
     # before: set_goalpath
     if @goalpath.destroy
       flash[:success] = 'Goalpath deleted!'
-      redirect_to @student
+      render :index
     else
       flash[:error] = 'Could not delete goalpath'
       render :show

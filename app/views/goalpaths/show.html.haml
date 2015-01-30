@@ -1,8 +1,10 @@
 %h1= "Goal: #{@goalpath.end_goal.titleize}"
 %h2= @student.full_name
 
-=link_to 'Back', [@student, :goalpaths]
-=link_to 'Edit', [:edit, @student, @goalpath]
+
+= back_button [@student, :goalpaths]
+= edit_button [:edit, @student, @goalpath]
+= delete_button [@student, @goalpath]
 
 - schools = @goalpath.schools
 - unless schools.empty?
