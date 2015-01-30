@@ -1,0 +1,69 @@
+Alabama	AL	USA	state	10
+Alaska	AK	USA	state	10
+Arizona	AZ	USA	state	10
+Arkansas	AR	USA	state	10
+California	CA	USA	state	10
+Colorado	CO	USA	state	10
+Connecticut	CT	USA	state	10
+Delaware	DE	USA	state	10
+Florida	FL	USA	state	10
+Georgia	GA	USA	state	10
+Hawaii	HI	USA	state	10
+Idaho	ID	USA	state	10
+Illinois	IL	USA	state	10
+Indiana	IN	USA	state	10
+Iowa	IA	USA	state	10
+Kansas	KS	USA	state	10
+Kentucky	KY	USA	state	10
+Louisiana	LA	USA	state	10
+Maine	ME	USA	state	10
+Maryland	MD	USA	state	10
+Massachusetts	MA	USA	state	10
+Michigan	MI	USA	state	10
+Minnesota	MN	USA	state	10
+Mississippi	MS	USA	state	10
+Missouri	MO	USA	state	10
+Montana	MT	USA	state	10
+Nebraska	NE	USA	state	10
+Nevada	NV	USA	state	10
+New Hampshire	NH	USA	state	10
+New Jersey	NJ	USA	state	10
+New Mexico	NM	USA	state	10
+New York	NY	USA	state	10
+North Carolina	NC	USA	state	10
+North Dakota	ND	USA	state	10
+Ohio	OH	USA	state	10
+Oklahoma	OK	USA	state	10
+Oregon	OR	USA	state	10
+Pennsylvania	PA	USA	state	10
+Rhode Island	RI	USA	state	10
+South Carolina	SC	USA	state	10
+South Dakota	SD	USA	state	10
+Tennessee	TN	USA	state	10
+Texas	TX	USA	state	10
+Utah	UT	USA	state	10
+Vermont	VT	USA	state	10
+Virginia	VA	USA	state	10
+Washington	WA	USA	state	10
+West Virginia	WV	USA	state	10
+Wisconsin	WI	USA	state	10
+Wyoming	WY	USA	state	10
+Washington DC	DC	USA	capitol	10
+Puerto Rico	PR	USA	commonwealth	20
+U.S. Virgin Islands	VI	USA	territory	20
+American Samoa	AS	USA	territory	20
+Guam	GU	USA	territory	20
+Northern Mariana Islands	MP	USA	commonwealth	20
+Alberta	AB	Canada	province	30
+British Columbia	BC	Canada	province	30
+Manitoba	MB	Canada	province	30
+New Brunswick	NB	Canada	province	30
+Newfoundland and Labrador	NL	Canada	province	30
+Nova Scotia	NS	Canada	province	30
+Ontario	ON	Canada	province	30
+Prince Edward Island	PE	Canada	province	30
+Quebec	QC	Canada	province	30
+Saskatchewan	SK	Canada	province	30
+Northwest Territories	NT	Canada	territory	40
+Nunavut	NU	Canada	territory	40
+Yukon Territory	YT	Canada	territory	40
