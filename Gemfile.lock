@@ -70,6 +70,8 @@ GEM
       uber
     erubis (2.7.0)
     execjs (2.2.2)
+    faker (1.4.3)
+      i18n (~> 0.5)
     figaro (1.1.0)
       thor (~> 0.14)
     foundation-rails (5.4.5.0)
@@ -210,6 +212,7 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.1.0)
   devise
+  faker
   figaro
   foundation-rails
   haml-rails

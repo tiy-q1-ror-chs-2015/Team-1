@@ -15,10 +15,6 @@ class ExperiencesController < ApplicationController
   end
 
   private
-  def exp_params
-    params.require(:test_scores)permit (
-      :title,
-      :description
-      )
-  end
+
+  
 end
