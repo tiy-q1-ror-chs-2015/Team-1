@@ -1,0 +1,10 @@
+%h1
+  Goal Path list for
+  = @student.full_name
+
+= link_to 'Add a new goal path', new_student_goalpath_path(@student)
+
+%ul
+  - @goalpaths.each do |goalpath|
+    %li
+      = link_to experience.title, [@student, goalpath]

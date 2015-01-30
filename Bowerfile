@@ -6,3 +6,4 @@ assets_path 'assets/javascripts'
 # asset 'bootstrap'
 
 asset 'sweetalert'
+asset 'selectize'

@@ -12,6 +12,7 @@
  *
  *= require foundation_and_overrides
  *= require ie9
+ *= require selectize
  *= require sweet-alert
  *= require_tree .
  *= require_self
