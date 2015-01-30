@@ -47,7 +47,6 @@ class StudentsController < ApplicationController
       flash[:error] = 'Could not save student'
       render :edit
     end
-
   end
 
   def destroy
