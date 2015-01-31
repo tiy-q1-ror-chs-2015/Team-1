@@ -57,7 +57,7 @@ class EssaysController < ApplicationController
   end
 
   def set_new_essay
-    @essay = @student.essay.new
+    @essay = @student.essays.new
   end
   
   def set_form

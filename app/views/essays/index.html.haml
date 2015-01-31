@@ -1,0 +1,11 @@
+%h1
+  ="Essays for #{@student.full_name}"
+= add_button new_student_essay_path, "Create new essay!"
+%br
+%br
+- @essays.each do |essay|
+  %li
+    = link_to essay.topic, [@student, essay]
+%br
+%br
+= back_button [@student]
