@@ -3,6 +3,8 @@ class StudentsController < ApplicationController
   before_action :set_new_student, only: [:new, :create]
   before_action :set_form, only: [:new, :create, :update, :edit]
 
+  load_and_authorize_resource
+
   def index
     @students = Student.all
 
