@@ -1,6 +1,19 @@
-%h1 Student College Prep App
+.welcome-context-box
+  %h1 College Path
+  %h2 Learn. Plan. Prepare.
+  .login-box
+    - if current_user
+      = link_to 'Continue your journey', current_user.student, class: 'button continue-journey'
+    - else
+      = form_for(@resource, url: user_session_path, method: :post) do |session_form|
+        = session_form.email_field :email, class: 'large', autofocus: true
+        = session_form.password_field :password, class: 'large'
+        -#= check_box_tag 'user[remember_me]'
+        -#= label_tag 'user[remember_me]', 'Remember me'
+        %button Sign in
+        = link_to "Forgot your password?", new_password_path(:user)
 
-= link_to "Create Profile", new_student_path
+  -#= link_to "Create Profile", new_student_path
 
 
 

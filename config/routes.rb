@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     resources :tests
     resources :test_scores
     resources :goalpaths
+    resources :student_schools, as: :schools
   end
   resources :schools
   # The priority is based upon order of creation: first created -> highest priority.
