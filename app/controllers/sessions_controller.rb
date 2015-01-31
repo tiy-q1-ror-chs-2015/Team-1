@@ -1,4 +1,8 @@
 class SessionsController < Devise::SessionsController
+
+  skip_authorization_check
+  skip_authorize_resource
+
 # before_filter :configure_sign_in_params, only: [:create]
 
   # GET /resource/sign_in

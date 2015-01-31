@@ -4,6 +4,9 @@ class TestScoresController < ApplicationController
   before_action :set_new_test_score, only: [:new, :create]
   before_action :set_form, only: [:new, :create, :update, :edit]
 
+  load_and_authorize_resource :student
+  load_and_authorize_resource :test_score, through: :student
+
   # BEFORE ALL ACTIONS: set_student
 
   def index

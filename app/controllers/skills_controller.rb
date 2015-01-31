@@ -4,6 +4,9 @@ class SkillsController < ApplicationController
   before_action :set_new_skill, only: [:new, :create]
   before_action :set_form, only: [:new, :create, :edit, :update]
 
+  load_and_authorize_resource :student
+  load_and_authorize_resource :skill, through: :student
+
   def index
     @skills = @student.skills
   end
