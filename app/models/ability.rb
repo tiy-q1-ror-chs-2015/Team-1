@@ -30,18 +30,21 @@ class Ability
     # https://github.com/ryanb/cancan/wiki/Defining-Abilities
 
     user ||= User.new # guest user (not logged in)
+    cannot :manage, :all
     if user.id
       # Registered user
-      if user.student
+      if user.admin?
+        can :manage, :all
+      elsif user.student
         # has set up student account
         id = user.student.id
         can [:show, :read, :update, :destroy], Student, id: id
-        can [:show, :read, :update, :destroy], Goalpath, student_id: id
-        can [:show, :read, :update, :destroy], StudentSchool, student_id: id
-        can [:show, :read, :update, :destroy], Skill, student_id: id
-        can [:show, :read, :update, :destroy], TestScore, student_id: id
-        can [:show, :read, :update, :destroy], Experience, student_id: id
-        can [:show, :read, :update, :destroy], Reference, student_id: id
+        can [:index, :show, :read, :update, :destroy], Goalpath, student_id: id
+        can [:index, :show, :read, :update, :destroy], StudentSchool, student_id: id
+        can [:index, :show, :read, :update, :destroy], Skill, student_id: id
+        can [:index, :show, :read, :update, :destroy], TestScore, student_id: id
+        can [:index, :show, :read, :update, :destroy], Experience, student_id: id
+        can [:index, :show, :read, :update, :destroy], Reference, student_id: id
       else
         # needs to set up account
         can :create, Student

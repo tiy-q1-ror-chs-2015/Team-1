@@ -5,7 +5,8 @@ class GoalpathsController < ApplicationController
   before_action :set_form, only: [:new, :create, :update, :edit]
 
 
-  load_and_authorize_resource
+  load_and_authorize_resource :student
+  load_and_authorize_resource :goalpath, through: :student
 
   # BEFORE ALL ACTIONS: set_student
 
