@@ -3,11 +3,11 @@
 - content_for :main_body do
   = render 'layouts/navbar'
   .row
-    .medium-2.columns
+    .medium-3.columns
       = render partial:'shared/left_sidebar'
-    .medium-8.columns.main-content-area
+    .medium-6.columns.main-content-area
       = yield
-    .medium-2.columns
+    .medium-3.columns
       %h4
       = render partial:'shared/right_sidebar'
 

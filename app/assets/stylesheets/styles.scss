@@ -1,5 +1,10 @@
+@import 'colors';
+@import 'fonts';
+
 .main-content-area {
   overflow: scroll;
+  height: 90vh;
+  padding-top: 3em;
 }
 
 nav.top-bar {
@@ -11,6 +16,24 @@ div.nav-right {
   float: right;
 }
 
+h1, h2, h3 {
+  font-family: 'AveriaSansBold', sans-serif;
+}
+
+h1 {
+  text-align: center;
+  color: $accent;
+  font-size: 3.5em;
+  text-shadow: $secondary-color 0.5px 1px 0.1px;
+  margin-top: 5vh;
+}
+
 li {
   list-style-type: none;
+}
+
+.panel {
+  background-color: $secondary-color;
+  border-color: darken($secondary-color, 20%);
+  text-align: center;
 }

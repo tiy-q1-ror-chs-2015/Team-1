@@ -20,14 +20,14 @@ body.welcome {
     h1 {
       color: $accent;
       font-size: 4em;
-//      letter-spacing: 0.08em;
+      text-align: left;
       font-family: 'BeonRegular';
       text-shadow: $secondary-color 0.5px 1px 0.1px;
       margin-top: 5vh;
     }
     h2, h3 {
       color: $primary-color;
-      font-family: 'AveriaSansBold';
+      font-family: 'AveriaSansBold', sans-serif;
       margin: 1em auto;
     }
     

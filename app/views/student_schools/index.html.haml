@@ -1,0 +1,5 @@
+%h1 You are interested in the following schools.
+
+%ul
+  - @student_schools.each do |student_school|
+    %li= student_school.school.name
