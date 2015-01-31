@@ -1,0 +1,11 @@
+%h1
+  Skill list for
+  = @student.full_name
+= add_button new_student_skill_path, "Create new experience"
+%ul
+%h2
+  %small
+    ="List of Skills"
+  - @skills.each do |experience|
+    %li
+      = link_to skill.skill_name, [@student, skill]

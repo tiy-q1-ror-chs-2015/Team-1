@@ -57,7 +57,7 @@ class SkillsController < ApplicationController
   end
 
   def set_new_skill
-    @skill = @student.skill.new
+    @skill = @student.skills.new
   end
   
   def set_form
