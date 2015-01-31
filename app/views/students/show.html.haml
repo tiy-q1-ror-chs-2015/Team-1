@@ -1,3 +1,20 @@
+<<<<<<< HEAD
+%h2= "Displaying Information for"
+%h2
+  %small
+    ="#{@student.first_name} #{@student.last_name}"
+%br
+%br
+=link_to 'Goal Paths', [@student, :goalpaths]
+%br
+=link_to 'Experiences', [@student, :experiences]
+%br
+=link_to 'References', [@student, :references]
+%br
+=link_to 'Tests', [@student, :test_scores]
+%br
+=======
+>>>>>>> 21a877afcecba83c1713f156a26a9e39484453af
 = back_button students_path
 %h1= "Hey #{@student.first_name}!"
 

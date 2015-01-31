@@ -1,6 +1,8 @@
-= form_for([@student, @form]) do |goalpath_form|
-  = render partial: 'application/form_component', locals: { f: goalpath_form, field: :end_goal, required: true }
-
+%h1
+  Create Your Goal Path
+= form_for([@student, @form], data: {'abide'=>true}) do |goalpath_form|
+  = field goalpath_form, :end_goal, required: true
+  
   = goalpath_form.select(:schools, options_from_collection_for_select(School.all, :id, :school_name, selected: @form.schools.map(&:id)), {prompt: 'Select one or more schools that relate to this goal'}, { multiple: true, data: {'selectize-standard' => true} })
 
-  = goalpath_form.submit
+  = submit_button("#{params[:action].to_s.titleize} Goal Path")
