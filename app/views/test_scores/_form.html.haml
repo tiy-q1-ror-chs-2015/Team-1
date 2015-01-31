@@ -2,7 +2,7 @@
   Create Your Test
 = form_for([@student, @form], data: {'abide'=>true}) do |test_score_form|
   = field test_score_form, :score, required: true
-  = field test_score_form, :date_taken, required: true
+  = field test_score_form, :date_taken, :date_field, required: true
   = field test_score_form, :test_type, required: true
 
   = submit_button("#{params[:action].to_s.titleize} Test")  

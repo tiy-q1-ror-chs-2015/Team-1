@@ -1,13 +1,13 @@
 class TestScoresController < ApplicationController
   before_action :set_student
   before_action :set_test_score, only: [:show, :edit, :update, :destroy]
-  before_action :set_new_test_score, only: [:new. :create]
-  before_action :set_form, only: [:new. :create, :update, :edit]
+  before_action :set_new_test_score, only: [:new, :create]
+  before_action :set_form, only: [:new, :create, :update, :edit]
 
   # BEFORE ALL ACTIONS: set_student
 
   def index
-    @test_types = @student.test_scores
+    @test_scores = @student.test_scores
   end
 
   def show
