@@ -32,8 +32,15 @@ li {
   list-style-type: none;
 }
 
+.left-sidebar, .right-sidebar {
+}
+
 .panel {
   background-color: $secondary-color;
   border-color: darken($secondary-color, 20%);
   text-align: center;
+}
+.side-panel-image {
+  text-align: center;
+  margin: 1.5em;
 }
