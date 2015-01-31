@@ -1,0 +1,9 @@
+%h1
+  Create Your Reference
+= form_for([@student, @form], data: {'abide'=>true}) do |reference_form|
+  = field reference_form, :name, required: true
+  = field reference_form, :relation_to_student, required: true
+  = field reference_form, :date, :date_field, required: true
+  = field reference_form, :content, :text_area, required: true
+
+  = submit_button("#{params[:action].to_s.titleize} Reference")
