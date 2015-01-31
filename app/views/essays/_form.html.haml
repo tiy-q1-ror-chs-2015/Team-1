@@ -1,0 +1,9 @@
+%h1
+  Create Your Essay
+= form_for([@student, @form], data: {'abide'=>true}) do |essay_form|
+  = field essay_form, :topic, required: true
+  = field essay_form, :essay_title, required: true
+  = field essay_form, :content, :text_area, required: true
+
+  = submit_button("#{params[:action].to_s.titleize} Essay")
+= back_button [@student, Essay]

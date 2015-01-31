@@ -1,0 +1,19 @@
+%h3
+  Essay
+
+%strong
+  Essay Topic:
+= @essay.topic
+%br
+%strong
+  Essay Title:
+= @essay.essay_title
+%br
+%strong
+  Essay Content:
+= @essay.content
+%br
+%br
+= back_button [@student, :essays]
+= edit_button [:edit, @student, @essay]
+= delete_button [@student, @essay]
