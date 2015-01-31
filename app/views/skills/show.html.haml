@@ -1,0 +1,9 @@
+%h1= @student.full_name
+%h2= @skill.skill_name
+%h3= 'Description'
+%p
+  = @skill.description
+  
+= back_button [@student, :goalpaths]
+= edit_button [:edit, @student, @skill]
+= delete_button [@student, @skill]

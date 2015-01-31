@@ -1,0 +1,8 @@
+%h1
+  Add Your Skill
+= form_for([@student, @form], data: {'abide'=>true}) do |skill_form|
+  = field skill_form, :skill_name, required: true
+  = field skill_form, :description, :text_area, required: true
+
+  = submit_button("#{params[:action].to_s.titleize} Skill")
+  = back_button student_skills_path
