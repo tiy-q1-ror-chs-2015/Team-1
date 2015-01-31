@@ -1,8 +1,8 @@
 class EssaysController < ApplicationController
   before_action :set_student
-  before_action :set_essay only: [:show, :edit, :update, :destroy]
-  before_action :set_new_essay only: [:new, :create]
-  before_action :set_form only: [:new, :create, :edit, :update]
+  before_action :set_essay, only: [:show, :edit, :update, :destroy]
+  before_action :set_new_essay, only: [:new, :create]
+  before_action :set_form, only: [:new, :create, :edit, :update]
 
   def index
   @essays = @student.essays
