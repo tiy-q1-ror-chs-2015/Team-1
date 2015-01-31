@@ -8,6 +8,9 @@ class GoalpathsController < ApplicationController
   load_and_authorize_resource :student
   load_and_authorize_resource :goalpath, through: :student
 
+  # Check authorization for every controller
+  check_authorization
+
   # BEFORE ALL ACTIONS: set_student
 
   def index

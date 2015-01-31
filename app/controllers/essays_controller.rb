@@ -7,6 +7,9 @@ class EssaysController < ApplicationController
   load_and_authorize_resource :student
   load_and_authorize_resource :essay, through: :student
 
+  # Check authorization for every controller
+  check_authorization
+
   def index
   @essays = @student.essays
   end
