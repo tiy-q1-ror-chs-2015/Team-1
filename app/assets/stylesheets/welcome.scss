@@ -1,17 +1,66 @@
+@import 'colors';
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-nav.top-bar {
-  text-align:left;
-}
+body.welcome {
+  background: url('girl_with_backpack.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  background-size: cover;
+  .welcome-context-box {
+    position: absolute;
+    top: 0vh;
+    bottom: 0vh;
+    right: 0vh;
+    text-align: center;
+    background: transparentize($jet, 0.2);
+    padding: 2em 3em;
+    color: $primary-color;
+    h1 {
+      color: $accent;
+      font-size: 4em;
+//      letter-spacing: 0.08em;
+      font-family: 'BeonRegular';
+      text-shadow: $secondary-color 0.5px 1px 0.1px;
+      margin-top: 5vh;
+    }
+    h2, h3 {
+      color: $primary-color;
+      font-family: 'AveriaSansBold';
+      margin: 1em auto;
+    }
+    
+    button, .button {
+      display: block;
+      margin: 1.5em auto;
+      color: $jet;
+      border-radius: 2px;
+    }
 
-div.nav-right {
-  text-align: right;
-  float: right;
-}
+    .continue-journey {
+      margin-top: 2.5em;
+      font-size: 1.5em;
+    }
 
-li {
-  list-style-type: none;
+    .login-box {
+      input {
+        background: transparentize($secondary-color, 0.15);
+        border-radius: 2px;
+        padding: 0.5em 1em;
+        text-align: center;
+        border: 0;
+        border-bottom: 0.2em solid transparent;
+        outline: 0;
+        font-size: 1.3em;
+        display: block;
+        margin: 1.5em auto;
+        width: 80%;
+        &:focus {
+          border-bottom-color: transparentize($primary-color, 0.3);
+          background: $secondary-color;
+        }
+      }
+    }
+  }
 }
