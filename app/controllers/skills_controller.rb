@@ -7,6 +7,9 @@ class SkillsController < ApplicationController
   load_and_authorize_resource :student
   load_and_authorize_resource :skill, through: :student
 
+  # Check authorization for every controller
+  check_authorization
+
   def index
     @skills = @student.skills
   end

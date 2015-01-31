@@ -5,6 +5,9 @@ class StudentsController < ApplicationController
 
   load_and_authorize_resource
 
+  # Check authorization for every controller
+  check_authorization
+
   def index
     @students = Student.all
 

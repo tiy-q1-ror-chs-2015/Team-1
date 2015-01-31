@@ -3,6 +3,7 @@ class RegistrationsController < Devise::RegistrationsController
   skip_authorization_check
   skip_authorize_resource
 
+
 # before_filter :configure_sign_up_params, only: [:create]
 # before_filter :configure_account_update_params, only: [:update]
 
