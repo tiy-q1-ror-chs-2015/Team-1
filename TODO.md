@@ -1,6 +1,7 @@
 # Jacqui
-EssaysController
-SkillsController
+EssaysController - done
+SkillsController - done
+
 
 # Matt
 ReferencesController
