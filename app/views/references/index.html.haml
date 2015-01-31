@@ -1,0 +1,11 @@
+%h1
+  Reference Information
+= add_button new_student_reference_path, "Create new reference"
+%br
+%br
+- @references.each do |reference|
+  %li
+    = link_to reference.name, [@student, reference]
+%br
+%br 
+= back_button [@student]

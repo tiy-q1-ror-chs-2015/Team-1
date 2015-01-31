@@ -1,6 +1,6 @@
 %h1
   Add Your Experience
-= form_for([@student, @form]) do |experience_form|
+= form_for([@student, @form], data: {'abide'=>true}) do |experience_form|
   = field experience_form, :title, required: true
   = field experience_form, :description, :text_area, required: true
 

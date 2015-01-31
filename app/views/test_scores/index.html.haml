@@ -1,0 +1,11 @@
+%h1
+  Test Information
+= add_button new_student_test_score_path, "Create new test"
+%br
+%br
+- @test_scores.each do |test|
+  %li
+    = link_to test_score.test_type, [@student, test]
+%br
+%br
+= back_button [@student]

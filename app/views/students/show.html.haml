@@ -1,8 +1,14 @@
-= "Displaying Information for #{@student.first_name} #{@student.last_name}:"
+%h2= "Displaying Information for"
+%h2
+  %small
+    ="#{@student.first_name} #{@student.last_name}"
 %br
 %br
 =link_to 'Goal Paths', [@student, :goalpaths]
 %br
 =link_to 'Experiences', [@student, :experiences]
+%br
+=link_to 'References', [@student, :references]
+%br
 %br
 = back_button students_path

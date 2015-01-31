@@ -1,0 +1,23 @@
+%h3=Reference
+
+%strong
+  Reference Name:
+= @reference.name
+%br
+%strong
+  Relation to Student:
+= @reference.relation_to_student
+%br
+%strong
+  Date:
+= @reference.date
+%br
+%strong
+  Content:
+= @reference.content
+%br
+%br
+= back_button [@student, :references]
+= edit_button [:edit, @student, @reference]
+= delete_button [@student, @reference]
+
