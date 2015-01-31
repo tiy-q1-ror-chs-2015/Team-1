@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 %h2= "Displaying Information for"
 %h2
   %small
@@ -12,4 +13,12 @@
 %br
 =link_to 'Tests', [@student, :test_scores]
 %br
+=======
+>>>>>>> 21a877afcecba83c1713f156a26a9e39484453af
 = back_button students_path
+%h1= "Hey #{@student.first_name}!"
+
+%p
+  So far you've picked out
+  = link_to "#{@student.goalpaths.count.humanize} #{'goal'.pluralize(@student.goalpaths.count)}.", [@student, :goalpaths]
+=link_to 'Experiences', [@student, :experiences]

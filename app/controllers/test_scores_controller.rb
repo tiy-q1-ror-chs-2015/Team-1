@@ -63,7 +63,7 @@ private
   end
 
   def set_test_score
-    @test_score = Test_Score.find params[:id]
+    @test_score = TestScore.find params[:id]
   end
 
   def set_new_test_score

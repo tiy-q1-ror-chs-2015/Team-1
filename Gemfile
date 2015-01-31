@@ -39,6 +39,8 @@ gem 'figaro'
 
 # Authorization
 gem 'devise'
+# User Privileges
+gem 'cancan'
 
 # Eases requiring a directory and its children
 gem 'require_all'

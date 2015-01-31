@@ -1,0 +1,16 @@
+!!!
+
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Week4group
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  - if flash.keys.any?
+    - flash_type, flash_title = flash.first
+    %body.welcome{data: {'flash-type'=>"#{flash_type}", 'flash-title'=>"#{flash_title}"} }
+      = yield
+  - else
+    %body.welcome
+      = yield

@@ -52,6 +52,7 @@ GEM
       columnize (~> 0.8)
       debugger-linecache (~> 1.2)
       slop (~> 3.6)
+    cancan (1.6.10)
     coercible (1.0.0)
       descendants_tracker (~> 0.0.1)
     coffee-rails (4.1.0)
@@ -230,6 +231,7 @@ DEPENDENCIES
   awesome_print
   bower-rails
   byebug
+  cancan
   coffee-rails (~> 4.1.0)
   devise
   faker

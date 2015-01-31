@@ -1,4 +1,5 @@
-%h3=Test Information
+%h3
+  Test Information
 
 %strong
   Date Taken:
@@ -13,6 +14,6 @@
 = @test_score.score
 %br
 %br
-= back_button [@student, :test_score]
+= back_button [@student, :test_scores]
 = edit_button [:edit, @student, @test_score]
 = delete_button [@student, @test_score]

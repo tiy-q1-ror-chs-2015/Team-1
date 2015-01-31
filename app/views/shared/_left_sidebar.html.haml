@@ -1,0 +1,9 @@
+- if current_user
+  - student = current_user.student
+  %ul.side-nav{'role'=>'navigation', 'title'=>'Link List'}
+    %li= link_to 'Goals', [student, Goalpath]
+    %li= link_to 'Schools', [student, School]
+    %li= link_to 'Skills', [student, Skill]
+    %li= link_to 'Test Scores', [student, TestScore]
+    %li= link_to 'Experience', [student, Experience]
+    %li= link_to 'References', [student, Reference]
