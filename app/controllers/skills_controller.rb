@@ -1,8 +1,8 @@
 class SkillsController < ApplicationController
   before_action :set_student
-  before_action :set_skill only: [:show, :edit, :update, :destroy]
-  before_action :set_new_skill only: [:new, :create]
-  before_action :set_form only: [:new, :create, :edit, :update]
+  before_action :set_skill, only: [:show, :edit, :update, :destroy]
+  before_action :set_new_skill, only: [:new, :create]
+  before_action :set_form, only: [:new, :create, :edit, :update]
 
   def index
     @skills = @student.skills
