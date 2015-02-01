@@ -39,16 +39,16 @@ class Ability
         # has set up student account
         id = user.student.id
         can [:show, :read, :update, :destroy], Student, id: id
-        can [:index, :show, :read, :update, :destroy], Goalpath, student_id: id
-        can [:index, :show, :read, :update, :destroy], StudentSchool, student_id: id
-        can [:index, :show, :read, :update, :destroy], Skill, student_id: id
-        can [:index, :show, :read, :update, :destroy], TestScore, student_id: id
-        can [:index, :show, :read, :update, :destroy], Experience, student_id: id
-        can [:index, :show, :read, :update, :destroy], Reference, student_id: id
-      else
-        # needs to set up account
-        can :create, Student
+        can [:index, :show, :create, :read, :update, :destroy], Goalpath, student_id: id
+        can [:index, :show, :create, :read, :update, :destroy], StudentSchool, student_id: id
+        can [:index, :show, :create, :read, :update, :destroy], Skill, student_id: id
+        can [:index, :show, :create, :read, :update, :destroy], TestScore, student_id: id
+        can [:index, :show, :create, :read, :update, :destroy], Experience, student_id: id
+        can [:index, :show, :create, :read, :update, :destroy], Reference, student_id: id
       end
+    else
+      # needs to set up account
+      can [:sign_up, :create], User
     end
   end
 end
