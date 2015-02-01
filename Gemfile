@@ -31,6 +31,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Stop 'getting' assets in server tab of terminal
 gem 'quiet_assets', group: :development
 
+# Add pagination
+gem 'will_paginate'
+
 # Frontend package management
 gem 'bower-rails'
 
@@ -39,6 +42,7 @@ gem 'figaro'
 
 # Authorization
 gem 'devise'
+
 # User Privileges
 gem 'cancan'
 
