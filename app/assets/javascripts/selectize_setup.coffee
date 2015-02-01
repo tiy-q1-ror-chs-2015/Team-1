@@ -12,7 +12,7 @@ $ ->
       load: (query, callback) ->
         return callback() unless query.length
         $.ajax({
-          url: "/schools/search/?query=#{encodeURIComponent(query)}",
+          url: "/schools/search.json?query=#{encodeURIComponent(query)}",
           type: 'GET',
           error: ->
             console.log 'error'
