@@ -2,7 +2,8 @@
   Create Your Goal Path
 = form_for([@student, @form], data: {'abide'=>true}) do |goalpath_form|
   = field goalpath_form, :end_goal, required: true
-  
-  = goalpath_form.select(:schools, options_from_collection_for_select(School.all, :id, :school_name, selected: @form.schools.map(&:id)), {prompt: 'Select one or more schools that relate to this goal'}, { multiple: true, data: {'selectize-standard' => true} })
+
+  -# Load in with selected schools. Rest will be loaded via AJAX
+  = goalpath_form.select(:schools, options_from_collection_for_select(@form.schools, :id, :school_name, selected: proc { true }), {prompt: 'Select one or more schools that relate to this goal'}, { multiple: true, class: 'selectize-school-list' })
 
   = submit_button("#{params[:action].to_s.titleize} Goal Path")

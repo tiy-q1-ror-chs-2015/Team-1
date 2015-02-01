@@ -1,5 +1,20 @@
 # Dark Magic
 
+## Setup
+
+### Solr
+
+**IMPORTANT:** This project depends on Solr for search functionality.  Solr must be running in the background for the site to operate properly.
+
+**To turn on Solr** open up a separate console tab and run `sunspot:solr:run`.  Leave Solr running as long as you are using the site.
+
+### Database Setup
+
+After setting up the database, run `rake create_states`, `rake create_schools`, and `rake create_data` (in that order).
+
+
+# Classes
+
 Each USER has one and only one STUDENTPROFILE.
 
 Each USER has an @email.
