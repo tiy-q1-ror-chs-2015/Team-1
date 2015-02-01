@@ -35,6 +35,14 @@ class SchoolsController < ApplicationController
     @school.delete
     redirect_to schools_path
   end
+
+  def search
+    r = School.search { fulltext params[:query] }.results
+    respond_to do |format|
+      # Only send back the id and school_name
+      format.json { render json: r.map{|c| {id:c.id, school_name:c.school_name}}}
+    end
+  end
 private
   def school_params
     params.require(:school).permit(
