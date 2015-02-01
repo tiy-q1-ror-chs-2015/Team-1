@@ -5,7 +5,7 @@ class SchoolsController < ApplicationController
   check_authorization
 
   def index
-    @schools = School.all
+    @schools = School.paginate(page: params[:page])
   end
 
   def new

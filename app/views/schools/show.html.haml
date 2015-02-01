@@ -5,36 +5,47 @@
   School Name:
 = @school.school_name
 %br
+- if current_user
+  = link_to "Favorite this School", "#"
+  %br
+- unless @school.full_address_array.empty?
+  %strong
+    Address:
+  %ul.no-bullet
+    - @school.full_address_array.each do |address_line|
+      %li= address_line
 %strong
-  City:
-= @school.city
+  Applicants
+= "#{@school.number_of_applicants} (#{number_to_percentage(@school.percent_applicants_admitted, precision:0)})"
 %br
 %strong
-  State:
-= @school.state
+  Enrolled
+= "#{@school.number_admitted} (#{@school.number_admitted_enrolled} enrolled / #{number_to_percentage(@school.percent_applicants_enrolled, precision:0)})"
 %br
-%strong
-  Application Deadline:
-= @school.application_deadline
-%br
+-if @school.application_deadline
+  %strong
+    Application Deadline:
+  = @school.application_deadline
+  %br
 %strong
   Average SAT:
-= @school.average_sat
+= @school.average_sat_components.join('–')
 %br
 %strong
   Average ACT:
-= @school.average_act
+= @school.average_act_components.join('–')
 %br
 %strong
   Student Population:
-= @school.student_population
+= number_with_delimiter(@school.student_population)
 %br
 %strong
-  Comment:
-= @school.comment
-%br
+  For more info:
+= link_to @school.website
 %br
 %br
 = back_button schools_path
-= edit_button [:edit, @school]
-= delete_button [@school]
+- if can? :edit, @school
+  = edit_button [:edit, @school]
+- if can? :delete, @school
+  = delete_button [@school]

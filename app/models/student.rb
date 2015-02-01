@@ -1,6 +1,8 @@
 class Student < ActiveRecord::Base
+
+  include Addressable
+
   belongs_to :user
-  has_one :address, as: :addressable
   has_many :test_scores
   has_many :references
   has_many :essays
