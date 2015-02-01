@@ -5,6 +5,9 @@
   School Name:
 = @school.school_name
 %br
+- if current_user
+  = link_to "Favorite this School", "#"
+  %br
 - unless @school.full_address_array.empty?
   %strong
     Address:
@@ -34,7 +37,7 @@
 %br
 %strong
   Student Population:
-= @school.student_population
+= number_with_delimiter(@school.student_population)
 %br
 %strong
   For more info:
@@ -42,5 +45,7 @@
 %br
 %br
 = back_button schools_path
-= edit_button [:edit, @school]
-= delete_button [@school]
+- if can? :edit, @school
+  = edit_button [:edit, @school]
+- if can? :delete, @school
+  = delete_button [@school]
