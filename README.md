@@ -4,7 +4,7 @@
 
 ### Solr
 
-**IMPORTANT:** This project depends on Solr for search functionality.  Solr must be running in the background for the site to operate properly.  (Solr requires a local installation of the Java Runtime Environment.)
+**IMPORTANT:** This project depends on Solr for search functionality.  Solr must be running in the background for the site to operate properly.  (Solr requires a local installation of the Java Development Kit (JDK).)
 
 **To turn on Solr** open up a separate console tab and run `bundle exec rake sunspot:solr:run`.  Leave Solr running as long as you are using the site.
 
