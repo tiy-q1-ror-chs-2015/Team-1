@@ -48,6 +48,28 @@ class StudentSchoolsController < ApplicationController
     end
   end
 
+  def add
+    result = MarkSchoolAsFavorite.call(school: School.find(params[:school_id]), student: @student)
+    respond_to do |format|
+      if result.success?
+        format.json { render json: {message: result.message} }
+      else
+        format.json { render json: {errors: result.message}, status: 422 } # unprocessable entity
+      end
+    end
+  end
+
+  def remove
+    result = UnmarkSchoolAsFavorite.call(school: School.find(params[:school_id]), student: @student)
+    respond_to do |format|
+      if result.success?
+        format.json { render json: {message: result.message} }
+      else
+        format.json { render json: {errors: result.message}, status: 422 } # unprocessable entity
+      end
+    end
+  end
+
   # def destroy
   #   # before: set_student_school
   #   if @student_school.destroy

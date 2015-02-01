@@ -10,7 +10,10 @@ Rails.application.routes.draw do
     resources :tests
     resources :test_scores
     resources :goalpaths
-    resource :student_schools, as: :schools
+    resource :student_schools, as: :schools do
+      post :add
+      post :remove
+    end
   end
   resources :schools do
     collection do
