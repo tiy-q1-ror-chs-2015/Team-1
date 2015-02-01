@@ -45,6 +45,8 @@ class Ability
         can [:index, :show, :create, :read, :update, :destroy], TestScore, student_id: id
         can [:index, :show, :create, :read, :update, :destroy], Experience, student_id: id
         can [:index, :show, :create, :read, :update, :destroy], Reference, student_id: id
+      else
+        can [:create], Student
       end
     else
       # needs to set up account
