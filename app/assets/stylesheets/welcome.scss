@@ -73,10 +73,20 @@ body.welcome {
   padding-bottom: 60px;
   background: rgb(34, 34, 34);
   color: #cbe86b;
+  text-align: center;
 }
 
 .footertitle {
   color: #e89d6b;
+}
+
+.social-icons {
+  display: inline-block;
+  margin: 0 auto;
+  li {
+    margin: 0;
+    padding: 0;
+  }
 }
 
 span.fi-social-facebook,
@@ -85,5 +95,9 @@ span.fi-social-instagram,
 span.fi-social-github
  {
   font-size: 40px;
-  padding-right: 25px;
+  padding: 0 12px;
+}
+
+.copyright-notice {
+  text-align: left;
 }

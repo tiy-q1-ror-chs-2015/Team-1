@@ -1,12 +1,6 @@
 @import 'colors';
 @import 'fonts';
 
-.main-content-area {
-  overflow: scroll;
-  height: 90vh;
-  padding-top: 3em;
-}
-
 nav.top-bar {
   text-align:left;
 }
@@ -17,7 +11,7 @@ div.nav-right {
 }
 
 h1, h2, h3 {
-  font-family: 'AveriaSansBold', sans-serif;
+  font-family: 'Arial, Helvetica', sans-serif;
 }
 
 h1 {
@@ -32,7 +26,10 @@ li {
   list-style-type: none;
 }
 
+
+
 .left-sidebar, .right-sidebar {
+
 }
 
 .panel {
@@ -45,10 +42,23 @@ li {
   margin: 1.5em;
 }
 
-.favorite-button {
+.favorite-button, .unfavorite-button {
+  transition: 0.1s color, 0.1s text-shadow;
+  padding-bottom: 0;
+  font-size: 0.9em;
+  vertical-align: bottom;
+}
+
+.unfavorite-button {
   color: darkgreen;
+  &:hover, &:active, &:focus {
+    color: darkred;
+  }
 }
 
 .favorite-button {
   color: darkred;
+  &:hover, &:active, &:focus {
+    color: darkgreen;
+  }
 }
