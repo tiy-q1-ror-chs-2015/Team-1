@@ -16,7 +16,7 @@ body.welcome {
     text-align: center;
     background: transparentize($jet, 0.2);
     padding: 2em 3em;
-    color: $primary-color;
+    color: #00CCFF;
     h1 {
       color: $accent;
       font-size: 4em;
@@ -26,7 +26,7 @@ body.welcome {
       margin-top: 5vh;
     }
     h2, h3 {
-      color: $primary-color;
+      color: #191919;
       font-family: 'AveriaSansBold', sans-serif;
       margin: 1em auto;
     }
@@ -70,14 +70,14 @@ body.welcome {
 
 #footerwrap {
   padding-top: 60px;
-  padding-bottom: 60px;
+  padding-bottom: 6#BABABA0px;
   background: rgb(34, 34, 34);
-  color: #cbe86b;
+  color: #966C19;
   text-align: center;
 }
 
 .footertitle {
-  color: #e89d6b;
+  color: #966C19;
 }
 
 .social-icons {
