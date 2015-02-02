@@ -1,8 +1,21 @@
 %h1= "Hey #{@student.first_name}!"
 
 %p
-  So far you've picked out
+  So far you have:
+  %br
+  %br
   = link_to "#{@student.goalpaths.count.humanize} #{'goal'.pluralize(@student.goalpaths.count)}.", [@student, :goalpaths]
-=link_to 'Experiences', [@student, :experiences]
+%br
+  = link_to "#{@student.student_schools.count.humanize} #{'school'.pluralize(@student.student_schools.count)}.", [@student, :schools]
+%br 
+  = link_to "#{@student.skills.count.humanize} #{'skill'.pluralize(@student.skills.count)}.", [@student, :skills]
+%br
+  = link_to "#{@student.test_scores.count.humanize} #{'tests'.pluralize(@student.test_scores.count)}.", [@student, :test_scores]
+%br
+  = link_to "#{@student.experiences.count.humanize} #{'experience'.pluralize(@student.experiences.count)}.", [@student, :experiences]
+%br
+  = link_to "#{@student.references.count.humanize} #{'reference'.pluralize(@student.references.count)}.", [@student, :references]
+%br
+  = link_to "#{@student.essays.count.humanize} #{'essay'.pluralize(@student.essays.count)}.", [@student, :essays]
 %br
 = back_button students_path

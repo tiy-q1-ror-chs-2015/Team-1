@@ -1,8 +1,6 @@
 class RegistrationsController < Devise::RegistrationsController
 
   skip_authorization_check
-  skip_authorize_resource
-
 
 # before_filter :configure_sign_up_params, only: [:create]
 # before_filter :configure_account_update_params, only: [:update]
@@ -55,7 +53,7 @@ class RegistrationsController < Devise::RegistrationsController
 
   # The path used after sign up.
   def after_sign_up_path_for(resource)
-    redirect_to new_student_path
+    new_student_path
   end
 
   # The path used after sign up for inactive accounts.
