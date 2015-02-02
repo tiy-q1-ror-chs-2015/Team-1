@@ -7,6 +7,6 @@
         = link_to "Register", new_user_registration_path
         = link_to "Login", new_user_session_path
     = link_to "Home", root_path
-    - if current_user && current_user.admin?
+    - if can?(:index, School)
       = link_to "Schools", schools_path
   

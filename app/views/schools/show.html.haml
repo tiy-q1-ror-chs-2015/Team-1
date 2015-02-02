@@ -4,9 +4,9 @@
 %strong
   School Name:
 = @school.school_name
-%br
-- if current_user
-  = link_to "Favorite this School", "#"
+- if can?(:add, School)
+  = favorite add_school_path, @school.id, @school.favorite_for?(current_user)
+  = unfavorite remove_school_path, @school.id, @school.favorite_for?(current_user)
   %br
 - unless @school.full_address_array.empty?
   %strong

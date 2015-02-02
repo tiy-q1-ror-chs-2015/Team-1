@@ -38,6 +38,7 @@ class Ability
       elsif user.student
         # has set up student account
         id = user.student.id
+        can [:index, :show, :add, :remove], School
         can [:show, :read, :update, :destroy], Student, id: id
         can [:index, :show, :create, :read, :update, :destroy], Goalpath, student_id: id
         can [:index, :show, :create, :read, :update, :destroy], StudentSchool, student_id: id

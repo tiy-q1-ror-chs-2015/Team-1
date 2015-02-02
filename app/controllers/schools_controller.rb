@@ -43,6 +43,28 @@ class SchoolsController < ApplicationController
       format.json { render json: r.map{|c| {id:c.id, school_name:c.school_name}}}
     end
   end
+
+  def add
+    result = AddFavoriteSchool.call(school: @school, user:current_user)
+    respond_to do |format|
+      if result.success?
+        format.js { render locals: {message: result.message, type: :success, id:@school.id} }
+      else
+        format.js { render locals: {message: result.message, type: :error} }
+      end
+    end
+  end
+
+  def remove
+    result = RemoveFavoriteSchool.call(school: @school, user:current_user)
+    respond_to do |format|
+      if result.success?
+        format.js { render locals: {message: result.message, type: :success, id:@school.id} }
+      else
+        format.js { render locals: {message: result.message, type: :error} }
+      end
+    end
+  end
 private
   def school_params
     params.require(:school).permit(
