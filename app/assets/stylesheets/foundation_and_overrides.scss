@@ -98,8 +98,8 @@ $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
 // $font-weight-bold: bold !default;
 
 // We use these as default colors throughout
-$primary-color: rgb(48,1,0);
-$secondary-color: rgb(0,0,0);
+$primary-color: #00003D;
+$secondary-color: #000000;
 $alert-color: #0000FF;
 // $success-color: #43AC6A;
 //$warning-color: #f08a24;
@@ -111,23 +111,23 @@ $white       : #fffcfc;
 // $vapor       : #F6F6F6;
 // $white-smoke : #F5F5F5;
 // $silver      : #EFEFEF;
-// $smoke       : #EEEEEE;
-// $gainsboro   : #DDDDDD;
+$smoke       : #EEEEEE;
+$gainsboro   : #DDDDDD;
 // $iron        : #CCCCCC;
 // $base        : #AAAAAA;
-// $aluminum    : #999999;
+$aluminum    : #999999;
 // $jumbo       : #888888;
 // $monsoon     : #777777;
 // $steel       : #666666;
-// $charcoal    : #555555;
+$charcoal    : #555555;
 // $tuatara     : #444444;
 // $oil         : #333333;
-$jet         : rgb(28,20,13);
-// $black       : #000000;
+$jet         : #00CCFF;
+$black       : #000000;
 
 // We use these to control various global styles
-$body-bg: $white;
-// $body-font-color: $jet;
+$body-bg: #EAE2D1;
+$body-font-color: $charcoal;
 // $body-font-family: $font-family-sans-serif;
 // $body-font-weight: $font-weight-normal;
 // $body-font-style: normal;
@@ -257,7 +257,7 @@ $global-radius: 3px;
 // We use these to style anchors
 // $anchor-text-decoration: none;
 // $anchor-text-decoration-hover: none;
-// $anchor-font-color: $primary-color;
+$anchor-font-color: #966C19;
 // $anchor-font-color-hover: scale-color($primary-color, $lightness: -14%);
 
 // We use these to style the <hr> element
@@ -1133,7 +1133,7 @@ $input-border-radius: $global-radius;
 // $side-nav-list-margin: rem-calc(0 0 7 0);
 
 // We use these to control link styles.
-// $side-nav-link-color: $primary-color;
+$side-nav-link-color: $charcoal;
 // $side-nav-link-color-active: scale-color($side-nav-link-color, $lightness: 30%);
 // $side-nav-link-color-hover: scale-color($side-nav-link-color, $lightness: 30%);
 // $side-nav-link-bg-hover: hsla(0, 0, 0, 0.025);
@@ -1216,7 +1216,7 @@ $input-border-radius: $global-radius;
 
 // We use these to control the active item styles
 // $sub-nav-active-font-weight: $font-weight-normal;
-// $sub-nav-active-bg: $primary-color;
+$sub-nav-active-bg: #CC33FF;
 // $sub-nav-active-bg-hover: scale-color($sub-nav-active-bg, $lightness: -14%);
 // $sub-nav-active-color: $white;
 // $sub-nav-active-padding: $sub-nav-padding;
@@ -1376,7 +1376,7 @@ $input-border-radius: $global-radius;
 // $topbar-title-font-size: rem-calc(17);
 
 // Style the top bar dropdown elements
-// $topbar-dropdown-bg: $oil;
+$topbar-dropdown-bg: #e89d6b;
 // $topbar-dropdown-link-color: $white;
 // $topbar-dropdown-link-bg: $oil;
 // $topbar-dropdown-link-weight: $font-weight-normal;
@@ -1385,7 +1385,7 @@ $input-border-radius: $global-radius;
 // $topbar-dropdown-toggle-alpha: 0.4;
 
 // Set the link colors and styles for top-level nav
-// $topbar-link-color: $white;
+$topbar-link-color: $white;
 // $topbar-link-color-hover: $white;
 // $topbar-link-color-active: $white;
 // $topbar-link-color-active-hover: $white;
