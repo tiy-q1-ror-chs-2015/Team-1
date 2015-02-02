@@ -70,6 +70,7 @@ class StudentsController < ApplicationController
 
   def set_new_student
     @student = Student.new
+    @student.user_id = current_user.id
   end
 
   def set_form
