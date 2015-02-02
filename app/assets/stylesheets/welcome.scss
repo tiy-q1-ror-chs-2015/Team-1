@@ -41,6 +41,9 @@ body.welcome {
     .continue-journey {
       margin-top: 2.5em;
       font-size: 1.5em;
+      &:hover {
+        font-style: italic;
+      }
     }
 
     .login-box {
