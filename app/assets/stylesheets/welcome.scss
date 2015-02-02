@@ -76,6 +76,11 @@ body.welcome {
   color: #e89d6b;
 }
 
-i.fi {
-  color: #cbe86b;
+span.fi-social-facebook,
+span.fi-social-twitter,
+span.fi-social-instagram,
+span.fi-social-github
+ {
+  font-size: 40px;
+  padding-right: 25px;
 }
