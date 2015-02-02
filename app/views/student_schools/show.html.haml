@@ -1,0 +1,21 @@
+=link_to 'Click here to see a list of American schools.', schools_path
+
+%h1 You are interested in the following schools.
+
+%ul
+  - @student.schools.each do |school|
+    %li= link_to school.school_name, polymorphic_path(school)
+
+- goal_schools = @student.goal_schools
+- if goal_schools.keys.any?
+  %h2 You've also linked these schools to your goals:
+  %ul
+    - goal_schools.each do |school, goals|
+      %li
+        = "#{school.school_name}: "
+        - if goals.length == 1
+          = link_to goals.first.end_goal, [@student, goals.first]
+        - else
+          %ul
+            - goals.each do |goal|
+              %li= link_to goal.end_goal, [@student, goal]

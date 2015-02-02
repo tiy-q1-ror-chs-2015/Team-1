@@ -41,6 +41,9 @@ body.welcome {
     .continue-journey {
       margin-top: 2.5em;
       font-size: 1.5em;
+      &:hover {
+        font-style: italic;
+      }
     }
 
     .login-box {
@@ -69,13 +72,32 @@ body.welcome {
   padding-top: 60px;
   padding-bottom: 60px;
   background: rgb(34, 34, 34);
-  color: #e89d6b;
+  color: #cbe86b;
+  text-align: center;
 }
 
 .footertitle {
   color: #e89d6b;
 }
 
-.foundicon {
-  color: #300000;
+.social-icons {
+  display: inline-block;
+  margin: 0 auto;
+  li {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+span.fi-social-facebook,
+span.fi-social-twitter,
+span.fi-social-instagram,
+span.fi-social-github
+ {
+  font-size: 40px;
+  padding: 0 12px;
+}
+
+.copyright-notice {
+  text-align: left;
 }

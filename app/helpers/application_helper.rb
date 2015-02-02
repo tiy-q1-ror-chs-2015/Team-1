@@ -1,5 +1,23 @@
 module ApplicationHelper
 
+  # FAVORITE/UNFAVORITE
+
+  def favorite link_path, id, hide
+    style = hide ? 'display: none;' : ''
+    link_to link_path, class: "favorite-button", id: "favorite-#{id}", style: style, method: :post, remote:true do
+      content_tag(:span, '', class: "icon-heart-empty")
+    end
+  end
+
+  def unfavorite link_path, id, visible
+    style = visible ? '' : 'display: none;'
+    link_to link_path, class: "unfavorite-button", id: "unfavorite-#{id}", style: style, method: :delete, remote:true do
+      content_tag(:span, '', class: "icon-heart-full")
+    end
+  end
+
+  # ICON BUTTONS
+
   def icon_button link_path, icon, text, button_class, icon_on_left, method: :get, confirm:false
     if confirm
       link_to link_path, class: "button button-#{button_class}", method: method, data: {'confirm'=>confirm} do
@@ -49,6 +67,15 @@ module ApplicationHelper
     content_tag :button, type: 'submit' do 
       concat content_tag(:span, '', class: "fi-#{icon}")
       concat " #{text}"
+    end
+  end
+
+  # Link Helpers
+  def absolute_path_for address
+    if address =~ /\/\//
+      address
+    else
+      "http://#{address}"
     end
   end
 end

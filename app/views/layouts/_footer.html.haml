@@ -5,20 +5,22 @@
         %h4.footertitle College Path | About Us
         .hline-w
         %p We are here to help you be the best you can be!
-        %br
-        &copy; 2015 College Path&reg;
       .medium-4.columns
         %h4.footertitle Social Links
         .hline-w
-        %p
-          %a{:href => "#"}
-            %i.foundicon.facebook
-          %a{:href => "#"}
-            %i.foundicon.twitter
-          %a{:href => "#"}
-            %i.foundicon.instagram
-          %a{:href => "#"}
-            %i.foundicon.github
+        %ul.social-icons.inline-list
+          %li
+            = link_to '#' do
+              %span.fi-social-facebook
+          %li
+            =link_to '#' do
+              %span.fi-social-twitter
+          %li
+            =link_to '#' do
+              %span.fi-social-instagram
+          %li
+            =link_to '#' do
+              %span.fi-social-github
       .medium-4.columns
         %h4.footertitle Our Location
         .hline-w
@@ -29,3 +31,4 @@
           %br
           United States.
           %br
+      .copyright-notice &copy; 2015 College Path&reg;
