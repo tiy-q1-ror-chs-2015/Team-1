@@ -47,3 +47,25 @@ li {
   text-align: center;
   margin: 1.5em;
 }
+
+
+.favorite-button, .unfavorite-button {
+  transition: 0.1s color, 0.1s text-shadow;
+  padding-bottom: 0;
+  font-size: 0.9em;
+  vertical-align: bottom;
+}
+
+.unfavorite-button {
+  color: darkgreen;
+  &:hover, &:active, &:focus {
+    color: darkred;
+  }
+}
+
+.favorite-button {
+  color: darkred;
+  &:hover, &:active, &:focus {
+    color: darkgreen;
+  }
+}
