@@ -1,3 +1,4 @@
+@import 'colors';
 @import 'fonts';
 // Foundation by ZURB
 // foundation.zurb.com
@@ -97,9 +98,9 @@ $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
 // $font-weight-bold: bold !default;
 
 // We use these as default colors throughout
-$primary-color: rgb(203,232,107);
-$secondary-color: rgb(242,233,225);
- $alert-color: #0000FF;
+$primary-color: rgb(48,1,0);
+$secondary-color: rgb(0,0,0);
+$alert-color: #0000FF;
 // $success-color: #43AC6A;
 //$warning-color: #f08a24;
 // $info-color: #a0d3e8;
@@ -431,6 +432,7 @@ $global-radius: 3px;
 // $button-display: inline-block;
 // $button-margin-bottom: rem-calc(20);
 
+
 // We use these to control button text styles.
 // $button-font-family: $body-font-family;
 // $button-font-color: $white;
@@ -448,7 +450,7 @@ $global-radius: 3px;
 // We use these to control button border and hover styles.
 // $button-border-width: 0px;
 // $button-border-style: solid;
-// $button-bg-color: $primary-color;
+// $button-bg-color: $white;
 // $button-bg-hover: scale-color($button-bg-color, $lightness: $button-function-factor);
 // $button-border-color: $button-bg-hover;
 // $secondary-button-bg-hover: scale-color($secondary-color, $lightness: $button-function-factor);
