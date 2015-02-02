@@ -1,21 +1,21 @@
 %h1= "Hey #{@student.first_name}!"
 
 %p
-  So far you have:
+  Welcome to College Path! We'll help organize your college planing because we know how important this step is for you! So far you have:
   %br
   %br
-  = link_to "#{@student.goalpaths.count.humanize} #{'goal'.pluralize(@student.goalpaths.count)}.", [@student, :goalpaths]
+  = link_to "#{@student.goalpaths.count.humanize.capitalize} #{'goal'.pluralize(@student.goalpaths.count)}.", [@student, :goalpaths], class: 'button continue-journey'
 %br
-  = link_to "#{@student.student_schools.count.humanize} #{'school'.pluralize(@student.student_schools.count)}.", [@student, :schools]
+  = link_to "#{@student.student_schools.count.humanize.capitalize} #{'school'.pluralize(@student.student_schools.count)}.", [@student, :schools], class: 'button continue-journey'
 %br 
-  = link_to "#{@student.skills.count.humanize} #{'skill'.pluralize(@student.skills.count)}.", [@student, :skills]
+  = link_to "#{@student.skills.count.humanize.capitalize} #{'skill'.pluralize(@student.skills.count)}.", [@student, :skills], class: 'button continue-journey'
 %br
-  = link_to "#{@student.test_scores.count.humanize} #{'tests'.pluralize(@student.test_scores.count)}.", [@student, :test_scores]
+  = link_to "#{@student.test_scores.count.humanize.capitalize} #{'tests'.pluralize(@student.test_scores.count)}.", [@student, :test_scores], class: 'button continue-journey'
 %br
-  = link_to "#{@student.experiences.count.humanize} #{'experience'.pluralize(@student.experiences.count)}.", [@student, :experiences]
+  = link_to "#{@student.experiences.count.humanize.capitalize} #{'experience'.pluralize(@student.experiences.count)}.", [@student, :experiences], class: 'button continue-journey'
 %br
-  = link_to "#{@student.references.count.humanize} #{'reference'.pluralize(@student.references.count)}.", [@student, :references]
+  = link_to "#{@student.references.count.humanize.capitalize} #{'reference'.pluralize(@student.references.count)}.", [@student, :references], class: 'button continue-journey'
 %br
-  = link_to "#{@student.essays.count.humanize} #{'essay'.pluralize(@student.essays.count)}.", [@student, :essays]
+  = link_to "#{@student.essays.count.humanize.capitalize} #{'essay'.pluralize(@student.essays.count)}.", [@student, :essays], class: 'button continue-journey'
 %br
-= back_button students_path
+= back_button root_path
