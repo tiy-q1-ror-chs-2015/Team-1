@@ -19,4 +19,8 @@ class School < ActiveRecord::Base
   def average_act_components
     [percentile_25_act_composite, percentile_75_act_composite]
   end
+
+  def favorite_for?(user)
+    user.student && students.include?(user.student)
+  end
 end

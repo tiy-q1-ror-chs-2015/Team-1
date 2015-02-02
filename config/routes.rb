@@ -10,14 +10,15 @@ Rails.application.routes.draw do
     resources :tests
     resources :test_scores
     resources :goalpaths
-    resource :student_schools, as: :schools do
-      post :add
-      post :remove
-    end
+    resource :student_schools, as: :schools
   end
   resources :schools do
     collection do
       get :search
+    end
+    member do
+      post :add
+      delete :remove
     end
   end
   # The priority is based upon order of creation: first created -> highest priority.
