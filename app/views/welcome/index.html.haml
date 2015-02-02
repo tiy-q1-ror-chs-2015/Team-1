@@ -3,7 +3,11 @@
   %h2 Learn. Plan. Prepare.
   .login-box
     - if current_user
-      = link_to 'Continue your journey', current_user.student, class: 'button continue-journey'
+      - if current_user.student
+        = link_to 'Continue your journey', current_user.student, class: 'button continue-journey'
+      - else
+        = link_to 'Continue your journey', new_student_path, class: 'button continue-journey'
+      = link_to 'Logout', destroy_user_session_path
     - else
       = form_for(@resource, url: user_session_path, method: :post) do |session_form|
         = session_form.email_field :email, class: 'large', autofocus: true

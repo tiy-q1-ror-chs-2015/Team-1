@@ -58,6 +58,7 @@ gem 'virtus'
 # Gives a variety of search functions for MySQL dbs: https://github.com/makandra/dusen
 gem 'sunspot_rails'
 gem 'sunspot_solr' # optional pre-packaged Solr distribution for use in development
+gem 'progress_bar' # used by sunspot_rails; not required
 
 # Avoid fat models _and_ fat controllers
 gem 'interactor'

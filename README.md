@@ -8,6 +8,8 @@
 
 **To turn on Solr** open up a separate console tab and run `bundle exec rake sunspot:solr:run`.  Leave Solr running as long as you are using the site.
 
+(If at any time your Solr index gets out of whack for whatever reason, you can run `bundle exec rake sunspot:solr:reindex`.)
+
 ### Database Setup
 
 After setting up the database, run `rake create_states`, `rake create_schools`, and `rake create_data` (in that order).
