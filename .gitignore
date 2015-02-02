@@ -26,3 +26,5 @@ db/schema.rb
 
 # Raw images (hugenormous)
 image_work
+
+solr/development/data
