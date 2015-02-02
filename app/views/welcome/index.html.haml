@@ -4,7 +4,7 @@
   .login-box
     - if current_user
       - if current_user.student
-        = link_to 'Continue your journey', current_user.student, class: 'button continue-journey'
+        = link_to 'Continue your journey', current_user.student, class: 'button continue-journey', data: {'hover-content' => 'Follow your heart'}
       - else
         = link_to 'Continue your journey', new_student_path, class: 'button continue-journey'
       = link_to 'Logout', destroy_user_session_path, method: :delete
